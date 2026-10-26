@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiche parents – Réservations en ligne</title>
+<style>
+  body { font: 15px/1.5 system-ui, "Segoe UI", Roboto, sans-serif; color: #222; background: #f4f4f4; margin: 0; }
+  .page { background: #fff; max-width: 760px; margin: 20px auto; padding: 36px 40px; }
+  h1 { color: #2f7d6d; font-size: 24px; margin: 0 0 4px; }
+  .sub { color: #666; margin: 0 0 22px; }
+  .etape { display: flex; gap: 14px; margin: 18px 0; }
+  .num { flex: 0 0 34px; height: 34px; border-radius: 50%; background: #2f7d6d; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  h2 { font-size: 16px; margin: 4px 0; }
+  p { margin: 4px 0; }
+  .lien { display: inline-block; background: #e2f1ec; color: #2f7d6d; font-weight: 700; padding: 6px 12px; border-radius: 6px; font-size: 17px; }
+  .ids { border: 2px dashed #2f7d6d; border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
+  .ids div { margin: 6px 0; } .ligne { display: inline-block; min-width: 260px; border-bottom: 1px solid #999; }
+  .demo { border: 1px solid #ddd; border-collapse: collapse; margin: 8px 0; font-size: 13px; }
+  .demo th, .demo td { border: 1px solid #ddd; padding: 4px 10px; text-align: center; }
+  .demo th { background: #f2f2f2; }
+  .note { background: #fffbe6; border-left: 4px solid #e0b000; padding: 8px 12px; margin-top: 20px; font-size: 14px; }
+  .bar { max-width: 760px; margin: 20px auto 0; }
+  .bar button { font: inherit; padding: 8px 14px; border-radius: 6px; border: 0; background: #2f7d6d; color: #fff; cursor: pointer; }
+  @media print { body { background: #fff; } .bar { display: none; } .page { margin: 0; padding: 10px 20px; } }
+</style></head>
+<body>
+<div class="bar"><button onclick="window.print()">Imprimer / PDF</button></div>
+<div class="page">
+  <h1>Réservez la garde de votre enfant en ligne</h1>
+  <p class="sub">Sadala Amandine – Accueil de jeunes enfants · 07 61 30 39 52</p>
+
+  <div class="etape"><div class="num">1</div><div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+    <div id="qr" style="width:130px;height:130px;flex:0 0 130px"></div>
+    <div>
+      <h2>Scannez ce code avec l'appareil photo de votre téléphone</h2>
+      <p>L'appli <b>« Amandine »</b> s'ouvre. Installez-la sur votre écran d'accueil :<br>
+        bouton <b>« 📲 Installer l'appli »</b> en haut de la page (Android, ordinateur),<br>
+        ou sur iPhone : <b>Partager</b> puis <b>« Sur l'écran d'accueil »</b>.</p>
+      <p class="muted" style="color:#777;font-size:13px">Sans téléphone : www.acsdeco-sarl.com/amandine</p>
+    </div>
+  </div></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>new QRCode(document.getElementById('qr'), {text: 'https://www.acsdeco-sarl.com/amandine/', width: 130, height: 130, colorDark: '#1e3a34', correctLevel: QRCode.CorrectLevel.M});</script>
+
+  <div class="etape"><div class="num">2</div><div>
+    <h2>Connectez-vous</h2>
+    <div class="ids">
+      <div>Email : <span class="ligne">&nbsp;</span></div>
+      <div>Mot de passe : <span class="ligne">&nbsp;</span></div>
+    </div>
+  </div></div>
+
+  <div class="etape"><div class="num">3</div><div>
+    <h2>Cochez les créneaux du mois</h2>
+    <p>Dans <b>Réservations</b>, un tableau par enfant : une ligne par jour, une colonne par créneau.</p>
+    <table class="demo">
+      <tr><th>Jour</th><th>Matin + école<br>7h30–8h30</th><th>Soir<br>16h30–18h15</th><th>Mercredi journée</th></tr>
+      <tr><td>Lun 02/11</td><td>☑</td><td>☐</td><td></td></tr>
+      <tr><td>Mar 03/11</td><td>☑</td><td>☑</td><td></td></tr>
+      <tr><td>Mer 04/11</td><td></td><td></td><td>☑</td></tr>
+    </table>
+    <p>Le bouton <b>« tout »</b> coche toute une colonne d'un coup. Changez de mois avec les flèches ◀ ▶.</p>
+    <p>Vacances scolaires : cochez <b>« Journée vacances / week-end »</b>.</p>
+  </div></div>
+
+  <div class="etape"><div class="num">4</div><div>
+    <h2>Cliquez sur « Enregistrer »</h2>
+    <p>Un message confirme les réservations. Une estimation du montant du mois s'affiche en bas.</p>
+  </div></div>
+
+  <div class="etape"><div class="num">5</div><div>
+    <h2>Un changement ? Décochez puis Enregistrez</h2>
+    <p>Possible <b>jusqu'à la veille</b>. Après, prévenez Amandine par téléphone.</p>
+    <p>Pour plusieurs enfants : chaque enfant a son propre tableau, décochez seulement celui qui ne vient pas.</p>
+  </div></div>
+
+  <div class="etape"><div class="num">6</div><div>
+    <h2>Vos factures</h2>
+    <p>Menu <b>Factures</b> : la facture du mois apparaît dès qu'elle est émise. Bouton <b>« Imprimer / PDF »</b> pour l'enregistrer.</p>
+    <p>Menu <b>Mes enfants</b> : vérifiez allergies, personnes autorisées et contact d'urgence.</p>
+  </div></div>
+
+  <div class="note">La garde est facturée à l'heure réelle d'arrivée et de départ, plus les repas, goûters et petits-déjeuners pris.
+    Une case grisée « complet » signifie qu'il n'y a plus de place ce jour-là : appelez Amandine.</div>
+</div>
+</body></html>

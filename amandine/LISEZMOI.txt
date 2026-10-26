@@ -1,0 +1,29 @@
+LOGICIEL DE GARDE PÉRISCOLAIRE – AMANDINE
+==========================================
+
+INSTALLATION SUR LWS
+1. Dans le panneau LWS, vérifier que la version PHP est 8.1 ou plus.
+2. Avec FileZilla (ou le gestionnaire de fichiers LWS), envoyer tout ce dossier
+   « amandine » à la racine du site (à côté de index.html).
+3. Ouvrir https://www.acsdeco-sarl.com/amandine/
+4. Créer le compte d'Amandine (email + mot de passe).
+5. Vérifier les tarifs dans « Prestations » et remplir « Réglages » (adresse, SIRET, IBAN…).
+6. Créer les familles dans « Familles » : un mot de passe est généré, à transmettre aux parents.
+7. SÉCURITÉ : ouvrir https://www.acsdeco-sarl.com/amandine/data/amandine.sqlite
+   → doit afficher « Forbidden / Accès interdit ». Si le fichier se télécharge, prévenir avant d'utiliser.
+
+LES PARENTS
+- Se connectent sur la même adresse avec leur email et mot de passe.
+- Cochent les créneaux du mois (matin, soir, mercredi…) puis « Enregistrer ».
+- Voient et impriment leurs factures.
+
+AMANDINE
+- Aujourd'hui : liste des enfants par créneau, allergies, pointage arrivée/départ.
+- Planning : vue du mois.
+- Factures : total par famille, marquer « payé ».
+- Fermetures : vacances / jours fériés (bloque les réservations).
+- Réglages > Sauvegarde : télécharger une copie des données (à faire régulièrement).
+
+DONNÉES
+Toutes les données sont dans data/amandine.sqlite (protégé, non accessible depuis le web).
+Ne jamais écraser ce dossier « data » lors d'une mise à jour.

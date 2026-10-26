@@ -1,0 +1,12 @@
+# Données personnelles et secrets : ne jamais envoyer sur GitHub
+codes-parents.txt
+apercu-invitation.html
+sauvegarde-nas.ps1
+sauvegardes/
+Factures/
+amandine/data/
+*.sqlite
+*.sqlite.tmp
+
+# Copies et fichiers générés
+*.zip
